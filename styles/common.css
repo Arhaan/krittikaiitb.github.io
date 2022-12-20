@@ -16,10 +16,6 @@ body{
   position: relative;
 }
 
-#content {
-  /* padding-bottom: 182px; */
-}
-
 #commonFooter {
   position: relative;
   bottom: 0;
@@ -93,9 +89,13 @@ nav a:hover {
   background-color: #111 !important;
 }
 .carousel-img{
-  height: 92vh;
+  /* height: 92vh; */
   width: 100%;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
+
+/* #__next{
+  min-height: 100%;
+} */

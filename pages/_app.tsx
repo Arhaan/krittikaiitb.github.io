@@ -1,6 +1,8 @@
 // import '../styles/globals.css'
 import '../styles/common.css'
 import '../styles/dark-mode.css'
+import '../styles/events.css'
+
 import Navbar from '../src/navbar'
 import Footer from '../src/footer'
 import type { AppProps } from 'next/app'

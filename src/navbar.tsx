@@ -1,5 +1,36 @@
 import Link from 'next/link'
 
+const NavLink = ({href, text}: {href:string, text:string}) => (
+  <li className="nav-item mx-1">
+  <Link
+    className="btn btn-link text-light my-2 my-sm-0 mx-1"
+    href={href}
+  >
+    <b className="lead">{text}</b>
+  </Link>
+  </li>
+
+)
+
+const DarkModeSwitch = () => (
+<li className="nav-item my-2 mx-md-0 mx-3">
+  <div className="custom-control custom-switch m-0 p-0">
+    <input
+      type="checkbox"
+      className="custom-control-input d-none"
+      id="darkSwitch"
+    />
+    <label
+      className="custom-control-label darkToggle"
+      htmlFor="darkSwitch"
+    >
+      <div className="dark-mode-img" />
+    </label>
+  </div>
+</li>
+
+)
+
 const Navbar = ()=> (
     <nav className="navbar fixed-top navbar-inverse navbar-expand-lg navbar-dark bg-dark topNavBar cinzel">
   <Link href="/">
@@ -26,30 +57,9 @@ const Navbar = ()=> (
   </button>
   <div className="collapse navbar-collapse" id="navbarNav">
     <ul className="navbar-nav ml-auto">
-      <li className="nav-item mx-1">
-        <Link
-          className="btn btn-link text-light my-2 my-sm-0 mx-4"
-          href="/team"
-        >
-          <b className="lead">Our Team</b>
-        </Link>
-      </li>
-      <li className="nav-item my-2 mx-md-0 mx-3">
-        {/*DARK-MODE-SWITCH*/}
-        <div className="custom-control custom-switch m-0 p-0">
-          <input
-            type="checkbox"
-            className="custom-control-input d-none"
-            id="darkSwitch"
-          />
-          <label
-            className="custom-control-label darkToggle"
-            htmlFor="darkSwitch"
-          >
-            <div className="dark-mode-img" />
-          </label>
-        </div>
-      </li>
+      <NavLink href="/events" text="Events"></NavLink>
+      <NavLink href="/team" text="Team"></NavLink>
+      <DarkModeSwitch/>
     </ul>
   </div>
 </nav>
